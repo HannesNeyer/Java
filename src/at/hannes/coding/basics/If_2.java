@@ -1,3 +1,5 @@
+package at.hannes.coding.basics;
+
 import java.util.Random;
 
 public class If_2 {
@@ -20,7 +22,6 @@ public class If_2 {
         {
             System.out.println("Eine der beiden Zahlen ist kleiner als 30");
         }
-
         if (randomNum_1 < 50 & randomNum_2 != 50)
         {
             System.out.println("Erste Zahl klein, zweite Zahl keine 50");

@@ -1,3 +1,5 @@
+package at.hannes.coding.basics;
+
 import java.util.Random;
 
 public class If_1
