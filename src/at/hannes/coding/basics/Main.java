@@ -1,12 +1,10 @@
 package at.hannes.coding.basics;
 
-import javax.sql.rowset.FilteredRowSet;
-
-public class car
+public class Main
 {
-    public static void main()
+    public static void main(String[] args)
     {
-        First_Object c1 = new First_Object();
+        /*First_Object c1 = new First_Object();
         c1.brand = "Audi";
         c1.fuelConsumption = 7;
         c1.serialNumber = "A1234";
@@ -27,8 +25,10 @@ public class car
         c2.turboBoost();
         c2.honk(5, 0);
         c2.getRemainingRange();
+         */
 
-
+        First_Object c3 = new First_Object(17, "Opel", "12340");
+        System.out.println(c3.serialNumber);
 
         /*System.out.println(c1.serialNumber);
         System.out.println(c2.serialNumber);
