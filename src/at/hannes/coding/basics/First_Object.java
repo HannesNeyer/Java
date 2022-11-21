@@ -15,18 +15,20 @@ public class First_Object
     String[] cars = {"7","Audi","A1234","5","BMW","B1234"};
     */
 
-    public int fuelConsumption;
-    public String brand;
-    public String serialNumber;
-    public int fuelAmount;
+    private int fuelConsumption;
+    private String brand;
+    private String serialNumber;
+    private int fuelAmount;
     private String color;
-    public int tankvolume;
+    private int tankvolume;
     private int tenPercent;
 
-    public First_Object(int fuelConsumption, String brand, String serialNumber){
-        this.fuelConsumption = fuelConsumption;
+    public First_Object(int fuelConsumption, String brand, String serialNumber, int fuelAmount, int tankvolume){
         this.brand = brand;
         this.serialNumber = serialNumber;
+        this.fuelConsumption = fuelConsumption;
+        this.fuelAmount = fuelAmount;
+        this.tankvolume = tankvolume;
     }
 
     public void drive(){
