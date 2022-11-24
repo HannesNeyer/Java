@@ -1,6 +1,6 @@
-package at.hannes.coding.basics;
+package at.hannes.coding.oo.cars;
 
-public class First_Object
+public class Car
 {
    /*
     int a = 7;
@@ -23,12 +23,15 @@ public class First_Object
     private int tankvolume;
     private int tenPercent;
 
-    public First_Object(int fuelConsumption, String brand, String serialNumber, int fuelAmount, int tankvolume){
+    private Engine engine;
+
+    public Car(int fuelConsumption, String brand, String serialNumber, int fuelAmount, int tankvolume, Engine engine){
         this.brand = brand;
         this.serialNumber = serialNumber;
         this.fuelConsumption = fuelConsumption;
         this.fuelAmount = fuelAmount;
         this.tankvolume = tankvolume;
+        this.engine = engine;
     }
 
     public void drive(){
@@ -65,5 +68,69 @@ public class First_Object
     {
         this.fuelAmount = this. fuelAmount / this.fuelConsumption;
         System.out.println("Die Reichweite beträgt: " + this.fuelAmount +"km");
+    }
+
+    public int getFuelConsumption() {
+        return fuelConsumption;
+    }
+
+    public void setFuelConsumption(int fuelConsumption) {
+        this.fuelConsumption = fuelConsumption;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public String getSerialNumber() {
+        return serialNumber;
+    }
+
+    public void setSerialNumber(String serialNumber) {
+        this.serialNumber = serialNumber;
+    }
+
+    public int getFuelAmount() {
+        return fuelAmount;
+    }
+
+    public void setFuelAmount(int fuelAmount) {
+        this.fuelAmount = fuelAmount;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public int getTankvolume() {
+        return tankvolume;
+    }
+
+    public void setTankvolume(int tankvolume) {
+        this.tankvolume = tankvolume;
+    }
+
+    public int getTenPercent() {
+        return tenPercent;
+    }
+
+    public void setTenPercent(int tenPercent) {
+        this.tenPercent = tenPercent;
+    }
+
+    public Engine getEngine() {
+        return engine;
+    }
+
+    public void setEngine(Engine engine) {
+        this.engine = engine;
     }
 }
