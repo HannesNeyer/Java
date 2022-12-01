@@ -15,28 +15,29 @@ public class Car
     String[] cars = {"7","Audi","A1234","5","BMW","B1234"};
     */
 
-    private int fuelConsumption;
     private String brand;
     private String serialNumber;
-    private int fuelAmount;
+
     private String color;
-    private int tankvolume;
+
     private int tenPercent;
 
     private Engine engine;
+    private Tank tank;
 
-    public Car(int fuelConsumption, String brand, String serialNumber, int fuelAmount, int tankvolume, Engine engine){
+    public Car(String brand, String serialNumber, Tank tank, Engine engine){
         this.brand = brand;
         this.serialNumber = serialNumber;
-        this.fuelConsumption = fuelConsumption;
-        this.fuelAmount = fuelAmount;
-        this.tankvolume = tankvolume;
         this.engine = engine;
+        this.tank = tank;
     }
 
     public void drive(){
-        this.fuelAmount = this.fuelAmount - fuelConsumption;
-        System.out.println("I am driving");
+        int speed = 0;
+        this.engine.setFuelConsumption(this.engine.getKm() * this.engine.getFuelConsumption());
+        this.tank.setFuelAmount(this.tank.getFuelAmount() - this.engine.getFuelConsumption());
+        speed = this.engine.getKm() * this.engine.getH();
+        System.out.println("I am driving at "+speed+" km per hour");
     }
 
     public void Break()
@@ -46,8 +47,8 @@ public class Car
 
     public void turboBoost()
     {
-        this.tenPercent = (this.tankvolume/100)*10;
-        if(this.fuelAmount < this.tenPercent)
+        this.tenPercent = (this.tank.getTankvolume()/100)*10;
+        if(this.tank.getFuelAmount() < this.tenPercent)
         {
             System.out.println("tankvolume low");
         }
@@ -66,16 +67,8 @@ public class Car
 
     public void getRemainingRange()
     {
-        this.fuelAmount = this. fuelAmount / this.fuelConsumption;
-        System.out.println("Die Reichweite beträgt: " + this.fuelAmount +"km");
-    }
-
-    public int getFuelConsumption() {
-        return fuelConsumption;
-    }
-
-    public void setFuelConsumption(int fuelConsumption) {
-        this.fuelConsumption = fuelConsumption;
+        this.tank.setFuelAmount(this.tank.getFuelAmount()/this.engine.getFuelConsumption());
+        System.out.println("Die Reichweite beträgt: " + this.tank.getFuelAmount()+"km");
     }
 
     public String getBrand() {
@@ -94,14 +87,6 @@ public class Car
         this.serialNumber = serialNumber;
     }
 
-    public int getFuelAmount() {
-        return fuelAmount;
-    }
-
-    public void setFuelAmount(int fuelAmount) {
-        this.fuelAmount = fuelAmount;
-    }
-
     public String getColor() {
         return color;
     }
@@ -110,13 +95,6 @@ public class Car
         this.color = color;
     }
 
-    public int getTankvolume() {
-        return tankvolume;
-    }
-
-    public void setTankvolume(int tankvolume) {
-        this.tankvolume = tankvolume;
-    }
 
     public int getTenPercent() {
         return tenPercent;
@@ -132,5 +110,13 @@ public class Car
 
     public void setEngine(Engine engine) {
         this.engine = engine;
+    }
+
+    public Tank getTank() {
+        return tank;
+    }
+
+    public void setTank(Tank tank) {
+        this.tank = tank;
     }
 }
