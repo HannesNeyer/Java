@@ -1,5 +1,8 @@
 package at.hannes.coding.oo.cars;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Car
 {
    /*
@@ -25,11 +28,14 @@ public class Car
     private Engine engine;
     private Tank tank;
 
-    public Car(String brand, String serialNumber, Tank tank, Engine engine){
+    private List<rear_mirror> mirrors;
+
+    public Car(String brand, String serialNumber, Tank tank, Engine engine, rear_mirror r1, rear_mirror r2){
         this.brand = brand;
         this.serialNumber = serialNumber;
         this.engine = engine;
         this.tank = tank;
+        this.mirrors = new ArrayList<>();
     }
 
     public void drive(){
@@ -69,6 +75,10 @@ public class Car
     {
         this.tank.setFuelAmount(this.tank.getFuelAmount()/this.engine.getFuelConsumption());
         System.out.println("Die Reichweite beträgt: " + this.tank.getFuelAmount()+"km");
+    }
+
+    public void getRearMirror(rear_mirror rear_mirror){
+        this.mirrors.add(rear_mirror);
     }
 
     public String getBrand() {
@@ -118,5 +128,9 @@ public class Car
 
     public void setTank(Tank tank) {
         this.tank = tank;
+    }
+
+    public List<rear_mirror> getMirrors() {
+        return mirrors;
     }
 }
