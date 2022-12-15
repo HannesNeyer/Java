@@ -29,13 +29,15 @@ public class Car
     private Tank tank;
 
     private List<rear_mirror> mirrors;
+    private Tires tires;
 
-    public Car(String brand, String serialNumber, Tank tank, Engine engine, rear_mirror r1, rear_mirror r2){
+    public Car(String brand, String serialNumber, Tank tank, Engine engine, rear_mirror r1, rear_mirror r2, Tires tires){
         this.brand = brand;
         this.serialNumber = serialNumber;
         this.engine = engine;
         this.tank = tank;
         this.mirrors = new ArrayList<>();
+        this.tires = tires;
     }
 
     public void drive(){
@@ -132,5 +134,13 @@ public class Car
 
     public List<rear_mirror> getMirrors() {
         return mirrors;
+    }
+
+    public Tires getTires() {
+        return tires;
+    }
+
+    public void setTires(Tires tires) {
+        this.tires = tires;
     }
 }
