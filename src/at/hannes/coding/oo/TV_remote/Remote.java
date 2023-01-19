@@ -9,12 +9,10 @@ public class Remote
 
 
     public Remote(Battery b1, Battery b2){
-        this.b1 = b1;
-        this.b2 = b2;
+        this.b1 = b1;    this.b2 = b2;
     }
 
-    public void getStatus(){
-        combinedChargingStatus = ((b1.getChargingStatus() + b2.getChargingStatus())/2);
+    public void getStatus(){        combinedChargingStatus = ((b1.getChargingStatus() + b2.getChargingStatus())/2);
         System.out.println("current battery status: " + combinedChargingStatus);
     }
 

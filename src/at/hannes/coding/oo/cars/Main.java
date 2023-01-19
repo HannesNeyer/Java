@@ -1,8 +1,4 @@
 package at.hannes.coding.oo.cars;
-import at.hannes.coding.oo.cars.Engine;
-import at.hannes.coding.oo.cars.Tank;
-import at.hannes.coding.oo.cars.rear_mirror;
-import at.hannes.coding.oo.cars.Tires;
 
 
 public class Main
@@ -23,6 +19,8 @@ public class Main
 
         Car c1 = new Car("Audi","123",t1,e1,r1,r2,T1);
         Car c2 = new Car("BMW","B427",t2,e2,r1,r2,T2);
+
+        Truck LKW = new Truck("Mercedes","256",t2,e2,r1,r2,T1,"Container Trailer")
 
         c1.drive();
         c1.Break();
