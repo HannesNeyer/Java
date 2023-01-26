@@ -1,6 +1,4 @@
 package at.hannes.coding.oo.cars;
-
-
 public class Main
 {
     public static void main(String[] args)
@@ -20,7 +18,7 @@ public class Main
         Car c1 = new Car("Audi","123",t1,e1,r1,r2,T1);
         Car c2 = new Car("BMW","B427",t2,e2,r1,r2,T2);
 
-        Truck LKW = new Truck("Mercedes","256",t2,e2,r1,r2,T1,"Container Trailer")
+        Truck LKW = new Truck("Mercedes","256",t2,e2,r1,r2,T1,"Container Trailer");
 
         c1.drive();
         c1.Break();
@@ -31,6 +29,8 @@ public class Main
         c2.Break();
         c2.turboBoost();
         c2.honk(4,0);
+
+        LKW.drive();
     }
 }
 
