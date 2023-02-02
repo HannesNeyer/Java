@@ -1,18 +1,14 @@
 package at.hannes.coding.oo.Calculator;
 import java.util.Scanner;
 
-public class Standard_Calculator
+public class StandardCaluclator
 {
-    public Standard_Calculator() {
-    }
-
-    public int selection(){
-        int selection = 0;
-        System.out.println("What do you want to do?");
-        System.out.println("1 sum up, 2 subtract, 3 multiply, 4 divide");
-        Scanner input = new Scanner(System.in);
-        selection = input.nextInt();
-        return selection;
+    public StandardCaluclator()
+    {
+        double num1 = 0;
+        double num2 = 0;
+        double result = 0;
+        int confirmation = 1;
     }
 
     public double calculation()
