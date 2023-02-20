@@ -1,48 +1,28 @@
 package at.hannes.coding.oo.Calculator;
 
-import java.util.Scanner;
-
 public class Main
 {
     public static void main(String[] args)
     {
-        int selection = 0;
-        System.out.println("What do you want to do?");
-        System.out.println("1 sum up, 2 subtract, 3 multiply, 4 divide, 5 Sinus, 6 Cosinus, 7 square root");
-        Scanner input = new Scanner(System.in);
-        selection = input.nextInt();
+        StandardCaluclator SC1 = new StandardCaluclator(5.32, 4.93);
+        SC1.division();
+        SC1.subtraction();
+        SC1.addition();
+        SC1.multiplication();
 
-        switch(selection)
-        {
-            case 1:
-            {
+        ScienceCalculator SC2 = new ScienceCalculator(3,6.22);
+        SC2.division();
+        SC2.subtraction();
+        SC2.addition();
+        SC2.multiplication();
+        SC2.Cos();
+        SC2.Sin();
 
-            }
-            case 2:
-            {
-
-            }
-            case 3:
-            {
-
-            }
-            case 4:
-            {
-
-            }
-            case 5:
-            {
-
-            }
-            case 6:
-            {
-
-            }
-            case 7:
-            {
-
-            }
-        }
+        SquareRootCalculator SC3 = new SquareRootCalculator(9.7,3);
+        SC3.division();
+        SC3.subtraction();
+        SC3.addition();
+        SC3.multiplication();
+        SC3.squareRoot();
     }
-
 }

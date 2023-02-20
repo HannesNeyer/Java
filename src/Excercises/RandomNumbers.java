@@ -2,7 +2,7 @@ package Excercises;
 
 import java.util.Random;
 
-public class Wuerfelspiel
+public class RandomNumbers
 {
     public static void main(String[] args)
     {

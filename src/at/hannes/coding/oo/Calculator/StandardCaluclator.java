@@ -3,100 +3,47 @@ import java.util.Scanner;
 
 public class StandardCaluclator
 {
-    public StandardCaluclator()
+    private double num1;
+    private double num2;
+    public StandardCaluclator(double num1, double num2)
     {
-        double num1 = 0;
-        double num2 = 0;
-        double result = 0;
-        int confirmation = 1;
+       this.num1 = num1;
+       this.num2 = num2;
     }
 
-    public double calculation()
+    public void addition()
     {
-        double num1 = 0;
-        double num2 = 0;
-        double result = 0;
-        int confirmation = 1;
+        System.out.println(num1 + num2);
+    }
 
-        switch(selection())
-        {
-            case 1:
-            {
+    public void subtraction()
+    {
+        System.out.println(num1 - num2);
+    }
 
-                System.out.println("Please typ in the numbers you want to be summerized");
-                do
-                {
-                    Scanner addition = new Scanner(System.in);
-                    num1 = addition.nextDouble();
-                    num2 = addition.nextDouble();
+    public void multiplication()
+    {
+        System.out.println(num1 * num2);
+    }
 
-                    num1 += num2;
-                    result += num1;
+    public void division()
+    {
+        System.out.println(num1/num2);
+    }
 
-                    System.out.println("Wollen sie noch eine weitere adition hinzufügen falls ja eine 1 eingeben sonste eine 0");
-                    Scanner YesNo = new Scanner(System.in);
-                    confirmation = YesNo.nextInt();
+    public double getNum1() {
+        return num1;
+    }
 
-                }while(confirmation == 1);
-            }
+    public void setNum1(double num1) {
+        this.num1 = num1;
+    }
 
-            case 2:
-            {
-                System.out.println("Please typ in the numbers you want to be subtracted");
-                do
-                {
-                    Scanner subtraction = new Scanner(System.in);
-                    num1 = subtraction.nextDouble();
-                    num2 = subtraction.nextDouble();
+    public double getNum2() {
+        return num2;
+    }
 
-                    num1 -= num2;
-                    result += num1;
-
-                    System.out.println("Wollen sie noch eine weitere subtraktion hinzufügen falls ja eine 1 eingeben sonste eine 0");
-                    Scanner YesNo = new Scanner(System.in);
-                    confirmation = YesNo.nextInt();
-
-                }while(confirmation == 1);
-            }
-
-            case 3:
-            {
-                System.out.println("Please typ in the numbers you want to be multiplyed");
-                do
-                {
-                    Scanner multiplication = new Scanner(System.in);
-                    num1 = multiplication.nextDouble();
-                    num2 = multiplication.nextDouble();
-
-                    num1 *= num2;
-                    result += num1;
-
-                    System.out.println("Wollen sie noch eine weitere muliplikation hinzufügen falls ja eine 1 eingeben sonste eine 0");
-                    Scanner YesNo = new Scanner(System.in);
-                    confirmation = YesNo.nextInt();
-
-                }while(confirmation == 1);
-            }
-
-            case 4:
-            {
-                System.out.println("Please typ in the numbers you want to be divided");
-                do
-                {
-                    Scanner multiplication = new Scanner(System.in);
-                    num1 = multiplication.nextDouble();
-                    num2 = multiplication.nextDouble();
-
-                    num1 /= num2;
-                    result += num1;
-
-                    System.out.println("Wollen sie noch eine weitere division hinzufügen falls ja eine 1 eingeben sonste eine 0");
-                    Scanner YesNo = new Scanner(System.in);
-                    confirmation = YesNo.nextInt();
-
-                }while(confirmation == 1);
-            }
-        }
-        return result;
+    public void setNum2(double num2) {
+        this.num2 = num2;
     }
 }
