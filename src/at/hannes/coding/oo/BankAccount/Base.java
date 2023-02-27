@@ -14,13 +14,21 @@ public class Base
 
     public void Depositing(){
         CurrentStatus += deposit;
-        System.out.println(CurrentStatus);
+        System.out.println("Current balance sheet after this transaction: "+CurrentStatus);
+        System.out.println();
     }
 
     public void PayOut(){
 
         CurrentStatus -= payOut;
         System.out.println(CurrentStatus);
+        System.out.println("Current balance sheet after this transaction: "+CurrentStatus);
+        System.out.println();
+    }
+
+    public void Status(){
+        System.out.println("Current balance sheet: "+CurrentStatus);
+        System.out.println();
     }
 
     public double getDeposit() {
