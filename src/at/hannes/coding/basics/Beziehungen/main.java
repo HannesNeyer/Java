@@ -11,7 +11,11 @@ public class main
         zoo.addAnimal(a1);
         zoo.addAnimal(a2);
         zoo.printAnimals();
+
         Dog d1 = new Dog(10,50);
         d1.bark();
+
+        zoo.addAnimal(d1);
+        zoo.printAnimals();
     }
 }
