@@ -10,6 +10,10 @@ public class Sim {
         PhoneNumber = phoneNumber;
     }
 
+    public void MakeCall(String PhoneNumber){
+        System.out.println("Calling" + PhoneNumber);
+    }
+
     public int getSimID() {
         return SimID;
     }
