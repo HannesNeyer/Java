@@ -7,13 +7,25 @@ public class SDCard {
     private int capacity;
     private List<SDFiles> phoneFiles;
 
-    public SDCard(int capacity, List<SDFiles> phoneFiles) {
+    public SDCard(int capacity) {
         this.capacity = capacity;
         this.phoneFiles = new ArrayList<>();
     }
 
-    public void SavePhoneFiles(SDFiles phoneFiles){
-        phoneFiles.add(phoneFiles);
+    public void SavePhoneFiles(SDFiles file){
+        this.phoneFiles.add(file);
+        System.out.println("Saved succussefully");
+    }
+
+    public void getAllFiles(){
+        for(int i = 0; i < phoneFiles.size(); i++){
+            System.out.println(this.phoneFiles.get(i));
+        }
+    }
+
+    public void getFreeSpace(){
+        this.phoneFiles.clear();
+        System.out.println("Space cleared");
     }
 
     public int getCapacity() {

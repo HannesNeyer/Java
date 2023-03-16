@@ -2,13 +2,19 @@ package at.hannes.coding.oo.Phone;
 
 public class SDFiles {
     private String dataTyp;
-    private int fileSize;
+    private double fileSize;
     private String fileName;
 
-    public SDFiles (String dataTyp, int fileSize, String fileName) {
+    public SDFiles (String dataTyp, double fileSize, String fileName) {
         this.dataTyp = dataTyp;
         this.fileSize = fileSize;
         this.fileName = fileName;
+    }
+
+    public void getInfo(){
+        System.out.println(this.dataTyp);
+        System.out.println(this.fileName);
+        System.out.println(this.fileSize);
     }
 
     public String getDataTyp() {
@@ -19,11 +25,11 @@ public class SDFiles {
         this.dataTyp = dataTyp;
     }
 
-    public int getFileSize() {
+    public double getFileSize() {
         return fileSize;
     }
 
-    public void setFileSize(int fileSize) {
+    public void setFileSize(double fileSize) {
         this.fileSize = fileSize;
     }
 
@@ -35,6 +41,4 @@ public class SDFiles {
         this.fileName = fileName;
     }
 
-    public void add(SDFiles phoneFiles) {
-    }
 }
