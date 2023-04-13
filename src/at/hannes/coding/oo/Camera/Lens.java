@@ -4,15 +4,14 @@ import at.hannes.coding.oo.Phone.LensProducer;
 
 public class Lens
 {
-    private String focalLength;
+    private int focalLength;
     private LensProducer lensProducer;
 
-    public Lens(String focalLength, LensProducer lensProducer) {
+    public Lens(int focalLength) {
         this.focalLength = focalLength;
-        this.lensProducer = lensProducer;
     }
 
-    public String getFocalLength() {
+    public int getFocalLength() {
         return focalLength;
     }
 

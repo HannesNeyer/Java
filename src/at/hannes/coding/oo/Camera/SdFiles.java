@@ -5,12 +5,13 @@ public class SdFiles
     private String dataTyp;
     private int fileSize;
     private String fileName;
-    private int fileNumber;
+    private String fileDate;
 
-    public SdFiles (String dataTyp, int fileSize, String fileName) {
+    public SdFiles(String dataTyp, int fileSize, String fileName, String fileDate) {
         this.dataTyp = dataTyp;
         this.fileSize = fileSize;
         this.fileName = fileName;
+        this.fileDate = fileDate;
     }
 
     public String getDataTyp() {
@@ -33,11 +34,15 @@ public class SdFiles
         return fileName;
     }
 
-    public int getFileNumber() {
-        return fileNumber;
+    public void setFileName(String fileName) {
+        this.fileName = fileName;
     }
 
-    public void setFileNumber(int fileNumber) {
-        this.fileNumber = fileNumber;
+    public String getFileDate() {
+        return fileDate;
+    }
+
+    public void setFileDate(String fileDate) {
+        this.fileDate = fileDate;
     }
 }

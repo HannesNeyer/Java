@@ -5,8 +5,9 @@ import java.util.List;
 
 public class SdCard
 {
-    private int capacity = 64;
+    private int capacity = 16;
     private List<SdFiles> cameraFiles;
+    private SdFiles SdFiles;
 
     public SdCard(List<SdFiles> cameraFiles) {
         this.cameraFiles = new ArrayList<>();
@@ -20,4 +21,11 @@ public class SdCard
         this.cameraFiles = cameraFiles;
     }
 
+    public void setCapacity(int capacity) {
+        this.capacity = capacity;
+    }
+
+    public int getCapacity() {
+        return capacity;
+    }
 }
