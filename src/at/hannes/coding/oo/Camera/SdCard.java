@@ -1,5 +1,7 @@
 package at.hannes.coding.oo.Camera;
 
+import at.hannes.coding.oo.Phone.SDFiles;
+
 import java.util.ArrayList;
 import java.util.List;
 

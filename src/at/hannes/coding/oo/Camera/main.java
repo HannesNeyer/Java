@@ -8,8 +8,13 @@ public class main
         Producer pro = new Producer("Canon","Japan");
         LensProducer lenPro = new LensProducer("Zeis","Germany");
         Lens len = new Lens(25);
-        SdCard sdc = new SdCard();
         Camera cam  = new Camera(0.5,"black", Camera.Resolution.Mittel);
+
+        pro.getProducerCountry();
+        pro.getProducerName();
+        lenPro.getProducerName();
+        lenPro.getProducerCountry();
+        cam.takePicture();
 
 
     }
