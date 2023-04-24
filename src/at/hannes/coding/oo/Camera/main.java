@@ -1,7 +1,5 @@
 package at.hannes.coding.oo.Camera;
 
-import at.hannes.coding.oo.Phone.LensProducer;
-
 public class main
 {
     public static void main(String[] args){
@@ -10,11 +8,23 @@ public class main
         Lens len = new Lens(25);
         Camera cam  = new Camera(0.5,"black", Camera.Resolution.Mittel);
 
-        pro.getProducerCountry();
-        pro.getProducerName();
-        lenPro.getProducerName();
-        lenPro.getProducerCountry();
+        //Camera properties
+        System.out.println(cam.getResolution());
+        System.out.println(cam.getWeight());
+        System.out.println(cam.getColor());
+        System.out.println(pro.getProducerCountry());
+        System.out.println(pro.getProducerName());
+        System.out.println(lenPro.getProducerName());
+        System.out.println(lenPro.getProducerCountry());
+        System.out.println("-------------------------------");
+
+        //Camera features
         cam.takePicture();
+        cam.takePicture();
+        cam.takePicture();
+        cam.takePicture();
+
+
 
 
     }

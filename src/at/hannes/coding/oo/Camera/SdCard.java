@@ -1,7 +1,5 @@
 package at.hannes.coding.oo.Camera;
 
-import at.hannes.coding.oo.Phone.SDFiles;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,8 +9,12 @@ public class SdCard
     private List<SdFiles> cameraFiles;
     private SdFiles SdFiles;
 
-    public SdCard(List<SdFiles> cameraFiles) {
+    public SdCard() {
         this.cameraFiles = new ArrayList<>();
+    }
+
+    public void SaveCamereaFiles(SdFiles file){
+        this.cameraFiles.add(file);
     }
 
     public List<SdFiles> getCameraFiles() {
